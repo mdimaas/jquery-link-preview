@@ -1,0 +1,26 @@
+{
+  "name": "jquery-link-preview",
+  "authors": [
+    "Dmitiry.Moisseyenko <mdimaas@gmail.com>"
+  ],
+  "description": "JQuery Plugin for preview link in real-time with meta data",
+  "main": "jquery-link-preview.js",
+  "keywords": [
+    "jquery-plugin.js",
+    "link",
+    "preview"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": ">=1.9"
+  },
+  "version": "1.0.0"
+}
