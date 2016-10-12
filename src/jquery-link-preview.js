@@ -77,7 +77,7 @@
 	}
 
 	function findFirstMetaProperty($html, property) {
-		return $($html.find("meta[property$='" + property + "']").get(0)).attr("content")
+		return $($html.find("meta[property$='" + property + "']").get(0)).attr("content");
 	}
 
 	function drawPreview($el, url, data) {
