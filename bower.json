@@ -3,7 +3,7 @@
   "authors": [
     "Dmitiry.Moisseyenko <mdimaas@gmail.com>"
   ],
-  "description": "JQuery Plugin for preview link in real-time in real-time with meta data",
+  "description": "JQuery Plugin for preview link in real-time with meta data",
   "main": "jquery-link-preview.js",
   "keywords": [
     "jquery-plugin.js",
