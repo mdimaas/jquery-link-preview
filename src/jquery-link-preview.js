@@ -9,8 +9,8 @@
 			}
 			$.get(options.urlWrapper ? options.urlWrapper : options.url, param,  function (data) {
 				if (data) {
-					if (typeof callback === "function") {
-						callback(data);
+					if (typeof options.callback === "function") {
+						options.callback(data);
 					} else {
 						drawPreview(self, options.url, readMeta(data, options.redirectUrl));
 					}
@@ -25,12 +25,12 @@
 		urlWrapperParam: "url",
 		ajaxLoader: "loading...",
 		toRedirectUrl: null,
-		toRedirectParam: null,
+		toRedirectParam: "away",
 		redirectUrl: null
 	};
 
 	$.fn.linkDetect = function (options) {
-		var opts = defaultOptions(options, this.text());
+		var opts = initOptions(options, this);
 		if (opts.url) {
 			var $divWrapper = $("<div/>");
 			this.after($divWrapper);
@@ -41,11 +41,22 @@
 		}
 	};
 
-	function defaultOptions(options, content) {
-		return $.extend({}, $.defaultOptions, options, {
-			url: detectUrl(content),
+	function initOptions(options, $obj) {
+		return $.extend({}, $.defaultOptions, dataAttr($obj), options, {
+			url: detectUrl($obj.text()),
 			redirectUrl: this.toRedirectUrl ? this.toRedirectUrl + "?" + this.toRedirectParam + "=" + this.url : this.url
 		});
+	}
+
+	function dataAttr($obj) {
+		return {
+			url: $obj.attr("data-url"),
+			urlWrapper: $obj.attr("data-url-wrapper"),
+			urlWrapperParam: $obj.attr("data-url-wrapper-param"),
+			ajaxLoader: $obj.attr("data-ajax-loader"),
+			toRedirectUrl: $obj.attr("data-to-redirect-url"),
+			toRedirectParam: $obj.attr("data-to-redirect-url")
+		}
 	}
 
 	function detectUrl(str) {
