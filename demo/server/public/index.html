@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./components/jquery/dist/jquery.min.js"></script>
+    <script src="./components/jquery-link-preview/dist/jquery-link-preview.min.js"></script>
+    <link href="./components/jquery-link-preview/dist/css/style.min.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<textarea id="test-link-preview" data-url-wrapper="http://localhost:3000/urlData" data-url-wrapper-param="get">http://new.delidishes.com/recipe/view/387</textarea>
+
+<script type="text/javascript">
+    (function () {
+        $("#test-link-preview").linkDetect({urlWrapper: "http://localhost:3000/urlData", urlWrapperParam: 'get'});
+    })();
+</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "server",
+  "description": "Demo server",
+  "authorsbower": [
+    "Dmitriy Moisseyenko <mdimaas@gmail.com>"
+  ],
+  "license": "MPL",
+  "homepage": "https://github.com/mdimaas/jquery-link-preview",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery-link-preview": "https://github.com/mdimaas/jquery-link-preview.git#1.0.0b"
+  }
+}

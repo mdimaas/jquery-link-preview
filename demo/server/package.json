@@ -1,0 +1,18 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Demo server",
+  "main": "server.js",
+  "scripts": {
+    "postinstall": "bower install"
+  },
+  "author": "Dmitriy Moisseyenko <mdimaas@gmail.com>",
+  "license": "MPL",
+  "dependencies": {
+    "express": "^4.14.0",
+    "sync-request": "^3.0.1"
+  },
+  "devDependencies": {
+    "bower": "^1.7.9"
+  }
+}
